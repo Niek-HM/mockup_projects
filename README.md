@@ -1,6 +1,6 @@
 # Example Projects Repository
 
-Welcome to our Example Projects Repository! This repository is a collection of diverse projects, showcasing various technologies, patterns, and practices in software development. Each project is a cleaned version, ensuring no sensitive data is present, making it safe for exploration and learning.
+Welcome to my Example Projects Repository! This repository is a collection of diverse projects, showcasing various technologies, patterns, and practices in software development. Each project is a cleaned version, ensuring no sensitive data is present, making it safe for exploration and learning.
 
 ## Table of Contents
 
@@ -10,7 +10,7 @@ Welcome to our Example Projects Repository! This repository is a collection of d
 
 ## Getting Started
 
-To get started with exploring our example projects, please clone this repository to your local machine:
+To get started with exploring my example projects, please clone this repository to your local machine:
 
 ```bash
 git clone https://github.com/NiekHM/ExampleWorkHidden.git
