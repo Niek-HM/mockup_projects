@@ -88,7 +88,7 @@ def get_excel(guid):
 def save_files(download_url, url):
     # Set headers for download (might not be necesary but always useful)
     headers = {
-        'Authorization': "48f8073b925fe00eb91f3715344a88589a22a16b16d1afbb122d10ba59acaee277740b7c2df820df32fa31987ebc33eaa99ff57c2c295711ef0ac431",
+        'Authorization': "<API_KEY>",
         'Content-Type': 'application/json',
         'User-Agent': 'python-sdk-{}'.format(pkg_resources.get_distribution('exportcomments').version),
     }
