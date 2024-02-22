@@ -1,0 +1,136 @@
+{% extends 'main/main.html' %}
+{% load static %}
+
+{% block title %}search{% endblock %}
+
+{% block description %}
+Here is everything you can find about our website located, feel free to look around for information, reviews and more.
+{% endblock %}
+
+{% block keywords %}IPBF, Search, Archive, PDF's{% endblock %}
+
+{% block content %}
+<link rel="stylesheet" type="text/css" href="{% static 'css/home.css' %}">
+
+<div class="container">
+    <form class="form-inline my-2 my-lg-0" method="get" action="" id="searchForm">
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-6">
+                    <h2 style="text-align: left">Archive Search</h2>
+                </div>
+
+                <div class="col-sm-6">
+                    <div class="input-group">
+                        <div class="col-sm-4" style="margin-right: 5px;">
+                            <select class="form-control" name="tag" id="{{ selected_tag }}">
+                                <option value="">Filter By Tag</option>
+                                
+                                {% for tag in tags %}
+                                    <option value="{{ tag }}">{{ tag }}</option>
+                                {% endfor %}
+                            </select>
+                        </div>
+
+                        <input class="form-control mr-sm-2" type="search" name="search" placeholder="Search" aria-label="Search" value="{{ search_query }}">
+                        <div class="input-group-append">
+                            <button class="btn btn-success" style="border-radius: 0 5px 5px 0; height: 100%;" type="submit">Search</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </form>
+
+    <hr>
+
+    <div class="row">
+        {% for item in items %} <!-- Display every paginated PDF and make sure to shows its length etc. -->
+            <div class="col-sm-6 d-flex card-link" data-url="/archive/{{item.id}}/">
+                <div class="card flex-fill" style="border: 1px solid rgb(27, 44, 73); cursor: pointer;">
+                    <div class="card-body" style="text-align: left">
+                        <hr style="margin-top: 0; color: rgb(62, 82, 115);">
+                        
+                        <div class="card border-0">
+                            <div class="row no-gutters">
+                                <h5 class="card-title"><a style="text-decoration: none; color: rgb(62, 82, 115);">[{{item.tag.first}}]</a> {% if item.name|length > 63 %}{{ item.name|slice:":64" }}&hellip;{% else %} {{ item.name }} {% endif %}</h5>
+                                <a class="card-text" href="/archive/{{item.id}}/" style="text-decoration: none;"><small class="text-muted">{{ item.pdf.url }}</small></a>
+                            </div>
+                        </div>
+
+                        <hr style="margin-bottom: 0; color: rgb(62, 82, 115);">
+
+                        <!--<p class="card-text">{% if item.description %}{{ item.description }}...{% else %}No Description Given{% endif %}</p>-->
+                    </div>
+                </div>
+            </div>
+
+        {% empty %}
+            <p>No results found.</p>
+        {% endfor %}
+    </div>
+
+    <div class="pagination"> <!-- Add pagination #TODO: Make the buttons look better. -->
+        <span class="step-links">
+            {% with request.GET.urlencode as params %}
+                {% if 'page=' in params %}
+                    {% with params|cut:'page='|slice:"2:" as params %}
+                        {% if page_obj.has_previous %}
+                            <a href="?page=1&{{ params }}">&laquo; first</a>
+                            <a href="?page={{ page_obj.previous_page_number }}&{{ params }}">previous</a>
+                        {% endif %}
+
+                        <span class="current">
+                            Page {{ page_obj.number }} of {{ page_obj.paginator.num_pages }}.
+                        </span>
+
+                        {% if page_obj.has_next %}
+                            <a href="?page={{ page_obj.next_page_number }}&{{ params }}">next</a>
+                            <a href="?page={{ page_obj.paginator.num_pages }}&{{ params }}">last &raquo;</a>
+                        {% endif %}
+                    {% endwith %}
+                {% else %}
+                    {% if page_obj.has_previous %}
+                        <a href="?page=1&&{{ params }}">{{ '&laquo; first' }}</a>
+                        <a href="?page={{ page_obj.previous_page_number }}&&{{ params }}">previous</a>
+                    {% endif %}
+
+                    <span class="current">
+                        Page {{ page_obj.number }} of {{ page_obj.paginator.num_pages }}.
+                    </span>
+
+                    {% if page_obj.has_next %}
+                        <a href="?page={{ page_obj.next_page_number }}&{{ params }}">next</a>
+                        <a href="?page={{ page_obj.paginator.num_pages }}&{{ params }}">{{ 'last &raquo;' }}</a>
+                    {% endif %}
+                {% endif %}
+            {% endwith %}
+        </span>
+    </div>
+</div>
+
+<script type="text/javascript">
+    // Wait for the page to be loaded
+    document.addEventListener('DOMContentLoaded', function() {
+        // Get current tag and selected element
+        var selectedTag = document.getElementsByName('tag')[0].id;
+        var selectElement = document.querySelector('select[name="tag"]');
+
+        // Set selected element to the current tag
+        if (selectedTag) {
+            selectElement.value = selectedTag;
+        }
+
+        // Add event listener to submit the form when the dropdown value changes
+        selectElement.addEventListener('change', function() {
+            document.getElementById('searchForm').submit();
+        });
+    });
+
+    document.querySelectorAll('.card-link').forEach(function(element) {
+        element.addEventListener('click', function() {
+            window.location.href = this.getAttribute('data-url');
+        });
+    });
+</script>
+{% endblock %}

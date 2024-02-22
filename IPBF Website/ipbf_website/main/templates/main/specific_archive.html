@@ -1,0 +1,15 @@
+{% extends 'main/main.html' %}
+
+{% block title %}{{ item.0.title }}{% endblock %}
+
+{% block description %}{{ item.0.description }}{% endblock %}
+
+{% block keywords %}IPBF, PDF, {{item.0.title}}{% endblock %}
+
+{% block content %}
+  <div class="container">
+    <h2>Archive - {{ item.name }}</h2>
+    <hr>
+    <iframe src="{{ item.pdf.url }}#toolbar=1" style="width:100%; height: 100vh;" allowfullscreen></iframe>
+  </div>
+{% endblock %}

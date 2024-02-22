@@ -1,0 +1,67 @@
+{% extends 'main/main.html' %}
+{% load static %}
+
+{% block title %}Home{% endblock %}
+
+{% block description %}
+The IPBF is a non-profit, voluntary, umbrella organization, active worldwide,
+that promotes knowledge and awareness of interstitial cystitis/bladder pain syndrome,
+Hunner lesion, hypersensitive bladder, chronic pelvic pain and associated disorders among patients,
+patient support groups, health professionals and the general public.
+The IPBF promotes the interests of IC/BPS patients around the globe.
+{% endblock %}
+
+{% block keywords %}IPBF, Home, Painful Bladder Syndrome, Jane Meijlink{% endblock %}
+
+{% block content %}
+<link rel="stylesheet" type="text/css" href="{% static 'css/home.css' %}">
+
+<br>
+
+<div class="container">
+    <div class="row">
+        <div class="col-sm-4 d-flex">
+            <div id="box-shadow-card" class="card flex-fill" style="border: 1px solid rgb(27, 44, 73); box-shadow: 4px 2px 0 0;">
+                <div class="card-body">
+                    <h5 class="card-title">Welcome to the International Painful Bladder Foundation</h5>
+                    <hr>
+
+                    <p class="card-text container">
+                        The IPBF is a non-profit, voluntary, umbrella organization, active worldwide,
+                        that promotes knowledge and awareness of interstitial cystitis/bladder pain syndrome,
+                        Hunner lesion, hypersensitive bladder,
+                        chronic pelvic pain and associated disorders among patients,
+                        patient support groups, health professionals and the general public.
+                        The IPBF promotes the interests of IC/BPS patients around the globe.
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-sm-8 d-flex">
+            <div class="card flex-fill" style="border: 1px solid rgb(27, 44, 73)">
+                <div class="card-body" style="text-align: center;">
+                    <h5 class="card-title">Latest Updates</h5>
+                    <hr>
+
+                    <a href="/archive/3170/" class="card-text text-muted" style="">
+                        Interstitial Cystitis, Bladder Pain Syndrome, Hunner Lesion: <br>
+                        An Overview of Diagnosis & Treatment <br>
+                        by Jane Meijlink
+                    </a>
+
+                    <hr style="width: 80%; margin-left: auto; margin-right: auto;">
+
+                    <p class="card-text"><a href="/archive/3317/" class="flex-fill text-muted" style="width: 100%; margin: 5px;">Read IPBF Research Update:<br> February 2024</a></p>
+                    <hr style="width: 80%; margin-left: auto; margin-right: auto;">
+
+                    <p class="card-text"><a href="/archive/3307/" class="flex-fill text-muted" style="width: 100%; margin: 5px;">Read IPBF Newsletter:<br> Issue 65, May 2023</a></p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<br>
+
+{% endblock %}

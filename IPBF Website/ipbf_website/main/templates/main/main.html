@@ -1,0 +1,257 @@
+{% load static %}
+
+<!DOCTYPE html>
+
+<html lang="en-us">
+    <head>
+        <title>{% block title %}IPBF{% endblock %}</title>
+
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <meta name="theme-color" content="#3E5273" />
+
+        <meta name="description" content="{% block description %}The official IPBF Website{% endblock %}">
+        <meta name="keywords" content="{% block keywords %}IPBF, Jane Meijlink, Painful Bladder{% endblock %}">
+        <meta name="author" content="Jane Meijlink">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <link rel="shortcut icon" type="image/x-icon" href="/media/images/home/IPBF_logo.ico">
+
+        <!-- Bootstrap CSS -->
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+        <link rel="stylesheet" type="text/css" href="{% static 'css/main.css' %}">
+        <link rel="manifest" href="{% static 'manifest/manifest.json' %}">
+
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js" defer></script>
+    </head>
+
+    <body style="height: 100vh;">
+        <div class="container-fluid text-white py-3 nav-logo">
+            <div class="row align-items-center" style="margin: 0; padding: 0">
+                <div class="col-sm-6 logo-style" style="width: 30%; text-align: center; padding: 0;">
+                    <b><p>IPBF</p></b>
+                </div>
+
+                <div id="hide_on_mobile" class="col-6 logo-style-sub" style="width: 60%;">
+                    <p class="mb-0">International Painful Bladder Foundation</p>
+                    <i><p class="mb-0">International Cooperation, Collaboration, Coordination, Communication</p></i>
+                </div>
+            </div>
+        </div>
+
+        <nav class="navbar navbar-expand-lg navbar-dark">
+            <div class="container">
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                    aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span>
+                </button>
+
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav mr-auto">
+                        <li class="nav-item"><a class="nav-link active" href="/">Home</a></li>
+
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                               aria-expanded="false">
+                                About Us
+                            </a>
+
+                            <ul class="dropdown-menu">
+                                <li><a class="dropdown-item" href="/archive/3167/">Status & Mission</a></li>
+                                <li><a class="dropdown-item" href="/archive/search/?tag=Annual+Reports&search=">Annual Reports</a></li>
+
+                                <li><hr class="dropdown-divider"></li>
+
+                                <li><a class="dropdown-item" href="/contact/">Contact</a></li>
+                            </ul>
+                        </li>
+
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                               aria-expanded="false">
+                                IC/BPS
+                            </a>
+
+                            <ul class="dropdown-menu">
+                                <li><a class="dropdown-item" href="/archive/3169/">Urinary Tract Basics</a></li>
+                                <li><hr class="dropdown-divider"></li>
+                                <li><a class="dropdown-item" href="/archive/3170/">IC/BPS Overview</a></li>
+
+                                <li><hr class="dropdown-divider"></li>
+                                <li><a class="dropdown-item" href="/archive/3171/">Hunner Lesion</a></li>
+
+                                <li><hr class="dropdown-divider"></li>
+                                <li><a class="dropdown-item" href="/archive/3172/">Hypersensitive bladder</a></li>
+
+                                <li><hr class="dropdown-divider"></li>
+                                <li><a class="dropdown-item" href="/archive/3313/">Other Painful Bladder Conditions</a></li>
+
+                                <li><hr class="dropdown-divider"></li>
+                                <li><a class="dropdown-item" href="/archive/3173/">Historical Overview</a></li>
+                            </ul>
+                        </li>
+
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                               aria-expanded="false">
+                                Associated Disorders
+                            </a>
+
+                            <ul class="dropdown-menu">
+                                <li><a class="dropdown-item" href="/archive/3176/">Associated disorders (J.P. vd Merwe, MD)</a></li>
+                                <li><a class="dropdown-item" href="/archive/3304/">Associated disorders patient perspective</a></li>
+
+                                <li><hr class="dropdown-divider"></li>
+
+                                <li><a class="dropdown-item" href="/archive/3311/">IC/BPS & Gastrointestinal Disorders (J.P. van de Merwe, MD)</a></li>
+
+                                <li><hr class="dropdown-divider"></li>
+
+                                <li><a class="dropdown-item" href="/archive/3175/">Fatigue in IC/BPS (J.P. vd Merwe, MD)</a></li>
+                                <li><a class="dropdown-item" href="/archive/3174/">Fatigue in IC/BPS patient perspective</a></li>
+
+                                <li><hr class="dropdown-divider"></li>
+
+                                <li><a class="dropdown-item" href="/archive/3177/">Questionnaire Associated Disorders (J.P. vd Merwe, MD)</a></li>
+                            </ul>
+                        </li>
+
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                               aria-expanded="false">
+                                News, Reviews & Research
+                            </a>
+
+                            <ul class="dropdown-menu">
+                                <li><a class="dropdown-item" href="/archive/search/?tag=Newsletters&search=">Newsletters</a></li>
+
+                                <li><hr class="dropdown-divider"></li>
+                                <li><a class="dropdown-item" href="/archive/search/?tag=Research+Updates&search=">Research Updates</a></li>
+
+                                <li><hr class="dropdown-divider"></li>
+                                <li><a class="dropdown-item" href="/archive/search/?tag=Reviews&search=">Reviews</a></li>
+                            </ul>
+                        </li>
+
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                               aria-expanded="false">
+                                IPBF Publications
+                            </a>
+
+                            <ul class="dropdown-menu">
+                                <li><a class="dropdown-item" href="/archive/3170/">ICBPS Diagnosis & Treatment Brochure</a></li>
+                                <li><a class="dropdown-item" href="/archive/3181/">ICBPS Booklet</a></li>
+
+                                <li><hr class="dropdown-divider"></li>
+                                <li><a class="dropdown-item" href="/archive/3178/">ICBPS Fact Sheet</a></li>
+                                <li><a class="dropdown-item" href="/archive/3180/">ICBPS Fact Sheet - Primary Care</a></li>
+                                <li><a class="dropdown-item" href="/archive/3179/">ICBPS Fact Sheet - Ketamine Cystitis</a></li>
+
+                                <li><hr class="dropdown-divider"></li>
+                                <li><a class="dropdown-item" href="/archive/3314/">Overactive Bladder Fact Sheet</a></li>
+                            </ul>
+                        </li>
+
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                               aria-expanded="false">
+                                Resources
+                            </a>
+
+                            <ul class="dropdown-menu">
+                                <li><a class="dropdown-item" href="/archive/3316/">Books, video's & CD's</a></li>
+
+                                <li><hr class="dropdown-divider"></li>
+                                <li><a class="dropdown-item" href="/archive/3182/">Guidelines & Classifications</a></li>
+
+                                <li><hr class="dropdown-divider"></li>
+                                <li><a class="dropdown-item" href="/archive/3183/">Symptom Score Information</a></li>
+                                <li><a class="dropdown-item" href="/archive/3184/">ICSI/ICPI Score</a></li>
+                                <li><a class="dropdown-item" href="/archive/3185/">PUF Score</a></li>
+
+                                <li><hr class="dropdown-divider"></li>
+                                <li><a class="dropdown-item" href="/archive/3186/">Symptom Score Disease Activity (J.P. vd Merwe, MD)</a></li>
+
+                                <li><hr class="dropdown-divider"></li>
+                                <li><a class="dropdown-item" href="/archive/3187/">Open Access Supplements</a></li>
+
+                                <li><hr class="dropdown-divider"></li>
+                                <li><a class="dropdown-item" href="/archive/3312/">Intravesical Cocktails</a></li>
+
+                                <li><hr class="dropdown-divider"></li>
+                                <li><a class="dropdown-item" href="/archive/3191/">Useful Links</a></li>
+                            </ul>
+                        </li>
+
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                               aria-expanded="false">
+                                Support Groups
+                            </a>
+
+                            <ul class="dropdown-menu">
+                                <li><a class="dropdown-item" href="/archive/3188/">Global Support Groups</a></li>
+
+                                <li><hr class="dropdown-divider"></li>
+                                <li><a class="dropdown-item" href="/archive/3189/">Start/Run a Support Group</a></li>
+
+                                <li><hr class="dropdown-divider"></li>
+                                <li><a class="dropdown-item" href="/archive/3190/">Toilet Cards + Instructions</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+
+                    <div class="my-2 my-lg-0" style="margin-left: auto; padding-right: 10px;"> <!-- #TODO: check if padding is good amount-->
+                        <a class="btn btn-outline-light my-2 my-sm-0" href="/archive/search/">Archive</a>
+                    </div>
+                </div>
+            </div>
+        </nav>
+        <!-- End Navbar-->
+
+        <br>
+
+        {% block content %}{% endblock %}
+
+        <br>
+
+        <!-- Footer -->
+        <footer class="text-center text-lg-start bg-white text-muted" style="margin-top: auto; background: none !important;">
+            <hr>
+            <section class="">
+                <div class="container text-center text-md-start mt-5">
+                    <div class="row mt-3">
+                        <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mb-4">
+                            <h6 class="text-uppercase fw-bold mb-4">Information</h6>
+                            <p><a href="/donations/" class="text-reset">Donations</a></p>
+                            <p><a href="/disclaimer_copyright/" class="text-reset">Disclaimer & Copyright</a></p>
+                        </div>
+
+                        <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mb-md-0 mb-4"> <!-- #TODO: Prob remove and replace for something else. -->
+                            <h6 class="text-uppercase fw-bold mb-4"><!--TODO: Image will be here--></h6>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Copyright -->
+            <div class="text-center p-4" style="background-color: rgb(27, 44, 73); color: white;">
+                © 2006-<a id="curr_year"></a>
+                <a class="text-reset fw-bold" href="/disclaimer_copyright/">International Painful Bladder Foundation (IPBF)</a>.
+                All rights reserved.
+            </div>
+        </footer>
+        <!-- End Footer-->
+
+        <script>
+            document.addEventListener('DOMContentLoaded', (event) => {
+                document.getElementById("curr_year").textContent = new Date().getFullYear();
+            });
+        </script>
+    </body>
+</html>

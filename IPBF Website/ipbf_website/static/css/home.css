@@ -1,0 +1,21 @@
+.text-muted {
+    color: rgb(66, 66, 66) !important;
+}
+
+.text-muted:hover {
+    color: #101010 !important;
+}
+
+.center-input-group {
+    display: flex;
+    justify-content: center;
+    width: 80%;
+    margin: 0 auto;
+}
+
+@media only screen and (max-width: 575px) {
+    #box-shadow-card {
+        box-shadow: none !important;
+        margin-bottom: 25px;
+    }
+}

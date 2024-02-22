@@ -1,0 +1,15 @@
+{
+  "name": "International Painful Bladder Foundation",
+  "short_name": "IPBF",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#3E5273",
+  "description": "The IPBF is a non-profit, voluntary, umbrella organization, active worldwide, that promotes knowledge and awareness of interstitial cystitis/bladder pain syndrome, Hunner lesion, hypersensitive bladder, chronic pelvic pain and associated disorders among patients, patient support groups, health professionals and the general public. The IPBF promotes the interests of IC/BPS patients around the globe.",
+  "icons": [
+    {
+      "src": "media/images/home/IPBF.ico",
+      "sizes": "146x115",
+      "type": "image/ico"
+    }
+  ]
+}

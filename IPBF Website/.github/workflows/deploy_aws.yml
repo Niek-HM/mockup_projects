@@ -1,0 +1,32 @@
+
+'STING TO MAKE SURE IT DOES NOT RUN IN EXAMPLES
+name: Deploy to Amazon ECS
+
+on:
+  push:
+    branches: [ "main" ]
+
+permissions:
+  contents: read
+
+jobs:
+  deploy:
+    name: Deploy
+    runs-on: ubuntu-latest
+    environment: production
+
+    steps:
+    - name: Checkout Repository
+      uses: actions/checkout@v2
+
+    - name: Copy Repository to EC2
+      uses: appleboy/scp-action@master
+      with:
+          host: <IP_OF_EC2>
+          username: <EC2_USERNAME>
+          key: <GITHUB_SECRET>
+          port: <PORT>
+          source: "."
+          target: <ROOT_FOLDER>
+
+'
