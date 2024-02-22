@@ -23,9 +23,9 @@ Navigate into the project directory of interest and refer to its specific `READM
 
 Below is a list of the example projects included in this repository. Each project comes with its own dedicated README file in its directory, providing detailed information about the project, including its purpose, technology stack, and how to run it.
 
-- **Export Comments**: Get comments from exportcomments.com. [Read more](./Export Comments/README.md)
-- **IPBF Website**: Create painful-bladder.org. [Read more](./IPBF Website/README.md)
-- **Scraping Amazon**: Scrape amazon products. [Read more](./Scraping Amazon/README.md)
+- **Export Comments**: Get comments from exportcomments.com. [Read more](<./Export Comments/README.md>)
+- **IPBF Website**: Create painful-bladder.org. [Read more](<./IPBF Website/README.md>)
+- **Scraping Amazon**: Scrape amazon products. [Read more](<./Scraping Amazon/README.md>)
 
 ## Contact
 
