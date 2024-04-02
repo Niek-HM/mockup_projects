@@ -37,6 +37,6 @@ def extract_content(urls):
 
 ## Contact
 
-For more information, contact me on [niek+git@meijlink5.nl](niek+git@meijlink5.nl) or <PHONE_NUMBER>. 
+For more information, contact me on [niek+git@meijlink5.nl](niek+git@meijlink5.nl).
 
 Made by: Niek M.
